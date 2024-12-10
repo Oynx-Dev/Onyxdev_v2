@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onyx Dev - Unblocked Gaming Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 h-full overflow-auto">
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
+     <div class="text-white text-2xl">
+         <div class="flex flex-col items-center">
+             <i class="fas fa-circle-notch fa-spin text-6xl mb-4 animate-spin-sl"></i>
+             <p class="text-xl mb-72">Please wait, loading...</p>
+         </div>
+     </div>
+ </div>
+    <div id="main-content" class="hidden">
+    <!-- Floating Navbar -->
+    <nav class="bg-indigo-900 bg-opacity-70 shadow-lg p-4 rounded-lg mx-4 mt-4 relative z-10">
+        <div class="container mx-auto flex justify-center items-center">
+              <ul class="flex items-center space-x-12">
+                   <li>
+                        <a href="index.html" class="text-white flex items-center hover:underline">
+                              <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                   </li>
+                   <li>
+                        <a href="games.html" class="text-white flex items-center hover:underline">
+                              <i class="fas fa-gamepad mr-2"></i> Games
+                        </a>
+                   </li>
+              </ul>
+        </div>
+   </nav>
+    
+
+    <!-- Main Content: Game Display -->
+    <div class="flex justify-center items-center h-[calc(95vh-3rem)] mt-[1rem] relative"> <!-- Added relative positioning -->
+        <iframe id="game" class="rounded-[10px] w-[90%] h-full shadow-[0_0_20px_rgba(255,255,255,0.5)]"></iframe> <!-- Set height to full to use available height -->
+        <button class=" absolute bottom-4 right-28 bg-indigo-700 text-white p-2 rounded w-32">Fullscreen</button> <!-- Fullscreen button -->
+    </div>
+    <script>
+        document.getElementById('fullscreen-btn').addEventListener('click', function() {
+            const iframe = document.getElementById('game');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        });
+    </script>
+</div>
+        <script src="play.js"></script>
+        <script src="games.js"></script>
+    <script src="about.js"></script>
+    <script>
+         function initiateLoadingScreen() {
+              setTimeout(() => {
+                    document.getElementById('main-content').classList.remove('hidden');
+                    document.getElementById('loading-screen').classList.add('hidden');
+              }, 2000); // Show content and hide loading screen after 2 seconds
+         }
+
+         window.addEventListener('load', initiateLoadingScreen);
+
+         // Initialize particles.js
+         particlesJS.load('particles-js', 'particles.json', function() {
+              console.log('particles.js loaded - callback');
+         });
+    </script>
+</body>
+</html>
