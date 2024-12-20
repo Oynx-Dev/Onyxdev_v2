@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onyx Dev - Unblocked Gaming Homepage</title>
+    <title>Onyx Dev</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 h-full overflow-auto">
+<body class="bg-black h-full overflow-auto ">
      <div id="particles-js" class="fixed inset-0 z-0"></div>
  
      <!-- Loading Screen -->
@@ -24,47 +24,37 @@
  
      <!-- Main Content -->
      <div id="main-content" class="hidden">
-          <nav class="bg-indigo-700 bg-opacity-70 shadow-lg p-4 rounded-lg mx-4 mt-4 relative z-10 ">
+          <nav class="shadow-lg p-3 rounded-full mx-4 mt-8 relative z-10 max-w-screen-md mx-auto outline outline-2 outline-white">
                <div class="container mx-auto flex justify-center items-center">
-                     <ul class="flex items-center space-x-12 ">
-                          <li>
-                               <a href="index.html" class="text-white flex items-center hover:underline">
-                                     <i class="fas fa-home mr-2"></i> Home
-                               </a>
-                          </li>
-                          <li>
-                               <a href="games.html" class="text-white flex items-center hover:underline">
-                                     <i class="fas fa-gamepad mr-2"></i> Games
-                               </a>
-                          </li>
-                     </ul>
+                   <span class="text-white font-semibold text-lg flex items-center gap-2 absolute left-6">
+                    <i class="fa-solid fa-code"></i> Onyx
+                   </span>
+                   <ul class="flex items-center space-x-4">
+                       <li>
+                           <a href="index.html" class="text-white flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                               <i class="fas fa-home"></i>
+                               Home
+                           </a>
+                       </li>
+                       <li>
+                           <a href="games.html" class="text-white flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                               <i class="fas fa-gamepad"></i>
+                               Games
+                           </a>
+                       </li>
+                       <li class="ml-auto text-white">
+                           <i class="fas fa-cog"></i>
+                       </li>
+                   </ul>
                </div>
-          </nav>
- 
+           </nav>
 
          <main class="absolute top-24 left-24">
               <div class="text-left">
                     <h1 class="text-6xl font-bold text-white">Welcome to <br> Onyx Dev</h1>
-                    <div class="border-t-2 border-white w-40 my-2"></div> <!-- Line separator, adjusted width -->
+                    <div class="border-t-2 border-white w-40 my-2 mt-4"></div> 
               </div>
-              <div class="text-center mt-4 mr-48">
-                    <h2 class="text-4xl font-bold text-white">Get Started</h2>
-              </div>
-              <div class="relative flex justify-center space-x-6 mt-6 h-full w-full">
-                    <!-- Cards -->
-                    <a href="retro-bowl.html" class="relative bg-cover bg-center rounded-lg h-48 w-96 p-4 flex items-center justify-center text-white text-2xl font-bold ring-4 ring-white" style="background-image: url('https://example.com/image1.jpg');">
-                         <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
-                         <div class="relative">Retro Bowl</div>
-                    </a>
-                    <a href="slope.html" class="relative bg-cover bg-center rounded-lg h-48 w-96 p-4 flex items-center justify-center text-white text-2xl font-bold ring-4 ring-white" style="background-image: url('https://sharemylesson.com/sites/default/files/image/2024-07/slope.jpg');">
-                         <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
-                         <div class="relative">Slope</div>
-                    </a>
-                    <a href="toss-the-turtle.html" class="relative bg-cover bg-center rounded-lg h-48 w-96 p-4 flex items-center justify-center text-white text-2xl font-bold ring-4 ring-white" style="background-image: url('https://example.com/image3.jpg');">
-                         <div class="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
-                         <div class="relative">Toss The Turtle</div>
-                    </a>
-              </div>
+            
          </main>
     </div>
 

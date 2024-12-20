@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onyx Dev - Unblocked Gaming Homepage</title>
+    <title>Onyx Dev </title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 h-full overflow-auto">
+<body class="bg-black h-full overflow-auto">
     <div id="particles-js" class="fixed inset-0 z-0"></div>
 
     <!-- Loading Screen -->
@@ -24,32 +25,38 @@
     <!-- Main Content -->
     <div id="main-content" class="hidden">
         <!-- Navbar -->
-        <nav class="bg-indigo-900 bg-opacity-70 shadow-lg p-4 rounded-lg mx-4 mt-4 fixed top-0 left-0 right-0 z-10">    
-            <div class="container mx-auto flex justify-between items-center">
-                <!-- Centered Navbar Links -->
-                <ul class="flex items-center justify-center space-x-12 w-full ml-32">
+        <nav class="shadow-lg p-3 rounded-full mx-4 mt-8 relative z-10 max-w-screen-md mx-auto outline outline-2 outline-white">
+            <div class="container mx-auto flex justify-center items-center">
+                <span class="text-white font-semibold text-lg flex items-center gap-2 absolute left-6">
+                 <i class="fa-solid fa-code"></i> Onyx
+                </span>
+                <ul class="flex items-center space-x-4">
                     <li>
-                        <a href="index.html" class="text-white flex items-center hover:underline">
-                            <i class="fas fa-home mr-2"></i> Home
+                        <a href="index.html" class="text-white flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                            <i class="fas fa-home"></i>
+                            Home
                         </a>
                     </li>
                     <li>
-                        <a href="games.html" class="text-white flex items-center hover:underline">
-                            <i class="fas fa-gamepad mr-2"></i> Games
+                        <a href="games.html" class="text-white flex items-center gap-2 px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                            <i class="fas fa-gamepad"></i>
+                            Games
                         </a>
                     </li>
+                    <li class="ml-auto text-white">
+                        <i class="fas fa-cog"></i>
+                    </li>
+    
                 </ul>
-                <!-- Search Bar -->
-                <input
-                    id="searchbar"
-                    type="text"
-                    placeholder="Search games..."
-                    class="p-0.5 rounded bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-xs w-44 h-8"
-                />
+            </div>
         </nav>
+        
+
+        
+        
 
         <!-- Games Container -->
-        <div class="mt-20 p-4 pt-24"></div>
+        <div class="mt-20 p-4 pt-24">
             <div class="games-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <!-- Games will be rendered here dynamically -->
             </div>

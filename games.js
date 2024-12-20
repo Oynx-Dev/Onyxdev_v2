@@ -23,7 +23,7 @@ async function fetchGames() {
 
 function createGameLink(game, cdn, imageCdn) {
     const link = document.createElement('a');
-    link.className = 'block p-4 bg-gray-800 rounded-lg shadow hover:shadow-lg transform hover:scale-105 transition';
+    link.className = 'block p-4 bg-gray-900 rounded-lg shadow hover:shadow-lg transform hover:scale-105 transition';
     link.href = 'play.html';
     link.addEventListener('click', () => {
         localStorage.setItem('game', JSON.stringify(game));
@@ -59,15 +59,15 @@ function renderAllGames() {
 }
 
 // Search functionality
-const search = document.getElementById('searchbar');
-search.addEventListener('input', () => {
-    const searchTerm = search.value.toLowerCase();
-    const games = document.getElementsByClassName('block');
-    Array.from(games).forEach(game => {
-        const gameName = game.querySelector('h3').textContent.toLowerCase();
-        game.style.display = gameName.includes(searchTerm) ? 'block' : 'none';
-    });
-});
+// const search = document.getElementById('searchbar');
+// search.addEventListener('input', () => {
+//     const searchTerm = search.value.toLowerCase();
+//     const games = document.getElementsByClassName('block');
+//     Array.from(games).forEach(game => {
+//         const gameName = game.querySelector('h3').textContent.toLowerCase();
+//         game.style.display = gameName.includes(searchTerm) ? 'block' : 'none';
+//     });
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
     showCdnPopup();
